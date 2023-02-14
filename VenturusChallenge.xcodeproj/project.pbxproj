@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C7EA691A299C3AD7002A1057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6919299C3AD7002A1057 /* AppDelegate.swift */; };
+		C7EA691C299C3AD7002A1057 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA691B299C3AD7002A1057 /* SceneDelegate.swift */; };
+		C7EA691E299C3AD7002A1057 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA691D299C3AD7002A1057 /* ViewController.swift */; };
+		C7EA6921299C3AD7002A1057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EA691F299C3AD7002A1057 /* Main.storyboard */; };
+		C7EA6923299C3AD8002A1057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7EA6922299C3AD8002A1057 /* Assets.xcassets */; };
+		C7EA6926299C3AD8002A1057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EA6924299C3AD8002A1057 /* LaunchScreen.storyboard */; };
+		C7EA6931299C3AD8002A1057 /* VenturusChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6930299C3AD8002A1057 /* VenturusChallengeTests.swift */; };
+		C7EA693B299C3AD8002A1057 /* VenturusChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA693A299C3AD8002A1057 /* VenturusChallengeUITests.swift */; };
+		C7EA693D299C3AD8002A1057 /* VenturusChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA693C299C3AD8002A1057 /* VenturusChallengeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C7EA692D299C3AD8002A1057 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7EA690E299C3AD7002A1057 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7EA6915299C3AD7002A1057;
+			remoteInfo = VenturusChallenge;
+		};
+		C7EA6937299C3AD8002A1057 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7EA690E299C3AD7002A1057 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7EA6915299C3AD7002A1057;
+			remoteInfo = VenturusChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C7EA6916299C3AD7002A1057 /* VenturusChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenturusChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7EA6919299C3AD7002A1057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C7EA691B299C3AD7002A1057 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C7EA691D299C3AD7002A1057 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C7EA6920299C3AD7002A1057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7EA6922299C3AD8002A1057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7EA6925299C3AD8002A1057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7EA6927299C3AD8002A1057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7EA692C299C3AD8002A1057 /* VenturusChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenturusChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7EA6930299C3AD8002A1057 /* VenturusChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenturusChallengeTests.swift; sourceTree = "<group>"; };
+		C7EA6936299C3AD8002A1057 /* VenturusChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenturusChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7EA693A299C3AD8002A1057 /* VenturusChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenturusChallengeUITests.swift; sourceTree = "<group>"; };
+		C7EA693C299C3AD8002A1057 /* VenturusChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenturusChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7EA6913299C3AD7002A1057 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7EA6929299C3AD8002A1057 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7EA6933299C3AD8002A1057 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C7EA690D299C3AD7002A1057 = {
+			isa = PBXGroup;
+			children = (
+				C7EA6918299C3AD7002A1057 /* VenturusChallenge */,
+				C7EA692F299C3AD8002A1057 /* VenturusChallengeTests */,
+				C7EA6939299C3AD8002A1057 /* VenturusChallengeUITests */,
+				C7EA6917299C3AD7002A1057 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7EA6917299C3AD7002A1057 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA6916299C3AD7002A1057 /* VenturusChallenge.app */,
+				C7EA692C299C3AD8002A1057 /* VenturusChallengeTests.xctest */,
+				C7EA6936299C3AD8002A1057 /* VenturusChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7EA6918299C3AD7002A1057 /* VenturusChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA6919299C3AD7002A1057 /* AppDelegate.swift */,
+				C7EA691B299C3AD7002A1057 /* SceneDelegate.swift */,
+				C7EA691D299C3AD7002A1057 /* ViewController.swift */,
+				C7EA691F299C3AD7002A1057 /* Main.storyboard */,
+				C7EA6922299C3AD8002A1057 /* Assets.xcassets */,
+				C7EA6924299C3AD8002A1057 /* LaunchScreen.storyboard */,
+				C7EA6927299C3AD8002A1057 /* Info.plist */,
+			);
+			path = VenturusChallenge;
+			sourceTree = "<group>";
+		};
+		C7EA692F299C3AD8002A1057 /* VenturusChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA6930299C3AD8002A1057 /* VenturusChallengeTests.swift */,
+			);
+			path = VenturusChallengeTests;
+			sourceTree = "<group>";
+		};
+		C7EA6939299C3AD8002A1057 /* VenturusChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA693A299C3AD8002A1057 /* VenturusChallengeUITests.swift */,
+				C7EA693C299C3AD8002A1057 /* VenturusChallengeUITestsLaunchTests.swift */,
+			);
+			path = VenturusChallengeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7EA6915299C3AD7002A1057 /* VenturusChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7EA6940299C3AD8002A1057 /* Build configuration list for PBXNativeTarget "VenturusChallenge" */;
+			buildPhases = (
+				C7EA6912299C3AD7002A1057 /* Sources */,
+				C7EA6913299C3AD7002A1057 /* Frameworks */,
+				C7EA6914299C3AD7002A1057 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VenturusChallenge;
+			productName = VenturusChallenge;
+			productReference = C7EA6916299C3AD7002A1057 /* VenturusChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C7EA692B299C3AD8002A1057 /* VenturusChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7EA6943299C3AD8002A1057 /* Build configuration list for PBXNativeTarget "VenturusChallengeTests" */;
+			buildPhases = (
+				C7EA6928299C3AD8002A1057 /* Sources */,
+				C7EA6929299C3AD8002A1057 /* Frameworks */,
+				C7EA692A299C3AD8002A1057 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7EA692E299C3AD8002A1057 /* PBXTargetDependency */,
+			);
+			name = VenturusChallengeTests;
+			productName = VenturusChallengeTests;
+			productReference = C7EA692C299C3AD8002A1057 /* VenturusChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C7EA6935299C3AD8002A1057 /* VenturusChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7EA6946299C3AD8002A1057 /* Build configuration list for PBXNativeTarget "VenturusChallengeUITests" */;
+			buildPhases = (
+				C7EA6932299C3AD8002A1057 /* Sources */,
+				C7EA6933299C3AD8002A1057 /* Frameworks */,
+				C7EA6934299C3AD8002A1057 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7EA6938299C3AD8002A1057 /* PBXTargetDependency */,
+			);
+			name = VenturusChallengeUITests;
+			productName = VenturusChallengeUITests;
+			productReference = C7EA6936299C3AD8002A1057 /* VenturusChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7EA690E299C3AD7002A1057 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					C7EA6915299C3AD7002A1057 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					C7EA692B299C3AD8002A1057 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = C7EA6915299C3AD7002A1057;
+					};
+					C7EA6935299C3AD8002A1057 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = C7EA6915299C3AD7002A1057;
+					};
+				};
+			};
+			buildConfigurationList = C7EA6911299C3AD7002A1057 /* Build configuration list for PBXProject "VenturusChallenge" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7EA690D299C3AD7002A1057;
+			productRefGroup = C7EA6917299C3AD7002A1057 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7EA6915299C3AD7002A1057 /* VenturusChallenge */,
+				C7EA692B299C3AD8002A1057 /* VenturusChallengeTests */,
+				C7EA6935299C3AD8002A1057 /* VenturusChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7EA6914299C3AD7002A1057 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7EA6926299C3AD8002A1057 /* LaunchScreen.storyboard in Resources */,
+				C7EA6923299C3AD8002A1057 /* Assets.xcassets in Resources */,
+				C7EA6921299C3AD7002A1057 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7EA692A299C3AD8002A1057 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7EA6934299C3AD8002A1057 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7EA6912299C3AD7002A1057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7EA691E299C3AD7002A1057 /* ViewController.swift in Sources */,
+				C7EA691A299C3AD7002A1057 /* AppDelegate.swift in Sources */,
+				C7EA691C299C3AD7002A1057 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7EA6928299C3AD8002A1057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7EA6931299C3AD8002A1057 /* VenturusChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7EA6932299C3AD8002A1057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7EA693D299C3AD8002A1057 /* VenturusChallengeUITestsLaunchTests.swift in Sources */,
+				C7EA693B299C3AD8002A1057 /* VenturusChallengeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C7EA692E299C3AD8002A1057 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7EA6915299C3AD7002A1057 /* VenturusChallenge */;
+			targetProxy = C7EA692D299C3AD8002A1057 /* PBXContainerItemProxy */;
+		};
+		C7EA6938299C3AD8002A1057 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7EA6915299C3AD7002A1057 /* VenturusChallenge */;
+			targetProxy = C7EA6937299C3AD8002A1057 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C7EA691F299C3AD7002A1057 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7EA6920299C3AD7002A1057 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C7EA6924299C3AD8002A1057 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7EA6925299C3AD8002A1057 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C7EA693E299C3AD8002A1057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C7EA693F299C3AD8002A1057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7EA6941299C3AD8002A1057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UYXMKT4M49;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VenturusChallenge/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = trio.challenge.marcelocarvalho.com.VenturusChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7EA6942299C3AD8002A1057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UYXMKT4M49;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VenturusChallenge/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = trio.challenge.marcelocarvalho.com.VenturusChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C7EA6944299C3AD8002A1057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UYXMKT4M49;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = trio.challenge.marcelocarvalho.com.VenturusChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VenturusChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VenturusChallenge";
+			};
+			name = Debug;
+		};
+		C7EA6945299C3AD8002A1057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UYXMKT4M49;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = trio.challenge.marcelocarvalho.com.VenturusChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VenturusChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VenturusChallenge";
+			};
+			name = Release;
+		};
+		C7EA6947299C3AD8002A1057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UYXMKT4M49;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = trio.challenge.marcelocarvalho.com.VenturusChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VenturusChallenge;
+			};
+			name = Debug;
+		};
+		C7EA6948299C3AD8002A1057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UYXMKT4M49;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = trio.challenge.marcelocarvalho.com.VenturusChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VenturusChallenge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7EA6911299C3AD7002A1057 /* Build configuration list for PBXProject "VenturusChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7EA693E299C3AD8002A1057 /* Debug */,
+				C7EA693F299C3AD8002A1057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7EA6940299C3AD8002A1057 /* Build configuration list for PBXNativeTarget "VenturusChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7EA6941299C3AD8002A1057 /* Debug */,
+				C7EA6942299C3AD8002A1057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7EA6943299C3AD8002A1057 /* Build configuration list for PBXNativeTarget "VenturusChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7EA6944299C3AD8002A1057 /* Debug */,
+				C7EA6945299C3AD8002A1057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7EA6946299C3AD8002A1057 /* Build configuration list for PBXNativeTarget "VenturusChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7EA6947299C3AD8002A1057 /* Debug */,
+				C7EA6948299C3AD8002A1057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7EA690E299C3AD7002A1057 /* Project object */;
+}
