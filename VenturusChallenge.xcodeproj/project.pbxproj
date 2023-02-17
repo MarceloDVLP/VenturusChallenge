@@ -9,13 +9,12 @@
 /* Begin PBXBuildFile section */
 		C7EA691A299C3AD7002A1057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6919299C3AD7002A1057 /* AppDelegate.swift */; };
 		C7EA691C299C3AD7002A1057 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA691B299C3AD7002A1057 /* SceneDelegate.swift */; };
-		C7EA691E299C3AD7002A1057 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA691D299C3AD7002A1057 /* ViewController.swift */; };
-		C7EA6921299C3AD7002A1057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EA691F299C3AD7002A1057 /* Main.storyboard */; };
 		C7EA6923299C3AD8002A1057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7EA6922299C3AD8002A1057 /* Assets.xcassets */; };
 		C7EA6926299C3AD8002A1057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EA6924299C3AD8002A1057 /* LaunchScreen.storyboard */; };
 		C7EA6931299C3AD8002A1057 /* VenturusChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6930299C3AD8002A1057 /* VenturusChallengeTests.swift */; };
-		C7EA693B299C3AD8002A1057 /* VenturusChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA693A299C3AD8002A1057 /* VenturusChallengeUITests.swift */; };
-		C7EA693D299C3AD8002A1057 /* VenturusChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA693C299C3AD8002A1057 /* VenturusChallengeUITestsLaunchTests.swift */; };
+		C7EA694A299C3AF0002A1057 /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6949299C3AF0002A1057 /* PhotoGalleryViewController.swift */; };
+		C7EA694F299C579B002A1057 /* PhotoGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA694D299C3B93002A1057 /* PhotoGalleryView.swift */; };
+		C7EA6950299C5FAB002A1057 /* PhotoGalleryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7EA694B299C3B48002A1057 /* PhotoGalleryView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,16 +38,15 @@
 		C7EA6916299C3AD7002A1057 /* VenturusChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenturusChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EA6919299C3AD7002A1057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7EA691B299C3AD7002A1057 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C7EA691D299C3AD7002A1057 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C7EA6920299C3AD7002A1057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7EA6922299C3AD8002A1057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7EA6925299C3AD8002A1057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7EA6927299C3AD8002A1057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7EA692C299C3AD8002A1057 /* VenturusChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenturusChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EA6930299C3AD8002A1057 /* VenturusChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenturusChallengeTests.swift; sourceTree = "<group>"; };
 		C7EA6936299C3AD8002A1057 /* VenturusChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenturusChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7EA693A299C3AD8002A1057 /* VenturusChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenturusChallengeUITests.swift; sourceTree = "<group>"; };
-		C7EA693C299C3AD8002A1057 /* VenturusChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenturusChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C7EA6949299C3AF0002A1057 /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
+		C7EA694B299C3B48002A1057 /* PhotoGalleryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoGalleryView.xib; sourceTree = "<group>"; };
+		C7EA694D299C3B93002A1057 /* PhotoGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +79,6 @@
 			children = (
 				C7EA6918299C3AD7002A1057 /* VenturusChallenge */,
 				C7EA692F299C3AD8002A1057 /* VenturusChallengeTests */,
-				C7EA6939299C3AD8002A1057 /* VenturusChallengeUITests */,
 				C7EA6917299C3AD7002A1057 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,13 +96,12 @@
 		C7EA6918299C3AD7002A1057 /* VenturusChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				C7EA6919299C3AD7002A1057 /* AppDelegate.swift */,
-				C7EA691B299C3AD7002A1057 /* SceneDelegate.swift */,
-				C7EA691D299C3AD7002A1057 /* ViewController.swift */,
-				C7EA691F299C3AD7002A1057 /* Main.storyboard */,
-				C7EA6922299C3AD8002A1057 /* Assets.xcassets */,
-				C7EA6924299C3AD8002A1057 /* LaunchScreen.storyboard */,
-				C7EA6927299C3AD8002A1057 /* Info.plist */,
+				C7EA6953299C600A002A1057 /* Features */,
+				C7EA6952299C5FD7002A1057 /* Resources */,
+				C7EA6951299C5FCA002A1057 /* Application */,
+				C7EA6949299C3AF0002A1057 /* PhotoGalleryViewController.swift */,
+				C7EA694B299C3B48002A1057 /* PhotoGalleryView.xib */,
+				C7EA694D299C3B93002A1057 /* PhotoGalleryView.swift */,
 			);
 			path = VenturusChallenge;
 			sourceTree = "<group>";
@@ -118,13 +114,30 @@
 			path = VenturusChallengeTests;
 			sourceTree = "<group>";
 		};
-		C7EA6939299C3AD8002A1057 /* VenturusChallengeUITests */ = {
+		C7EA6951299C5FCA002A1057 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				C7EA693A299C3AD8002A1057 /* VenturusChallengeUITests.swift */,
-				C7EA693C299C3AD8002A1057 /* VenturusChallengeUITestsLaunchTests.swift */,
+				C7EA6919299C3AD7002A1057 /* AppDelegate.swift */,
+				C7EA691B299C3AD7002A1057 /* SceneDelegate.swift */,
 			);
-			path = VenturusChallengeUITests;
+			path = Application;
+			sourceTree = "<group>";
+		};
+		C7EA6952299C5FD7002A1057 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA6922299C3AD8002A1057 /* Assets.xcassets */,
+				C7EA6924299C3AD8002A1057 /* LaunchScreen.storyboard */,
+				C7EA6927299C3AD8002A1057 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C7EA6953299C600A002A1057 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7EA6926299C3AD8002A1057 /* LaunchScreen.storyboard in Resources */,
+				C7EA6950299C5FAB002A1057 /* PhotoGalleryView.xib in Resources */,
 				C7EA6923299C3AD8002A1057 /* Assets.xcassets in Resources */,
-				C7EA6921299C3AD7002A1057 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7EA691E299C3AD7002A1057 /* ViewController.swift in Sources */,
+				C7EA694A299C3AF0002A1057 /* PhotoGalleryViewController.swift in Sources */,
+				C7EA694F299C579B002A1057 /* PhotoGalleryView.swift in Sources */,
 				C7EA691A299C3AD7002A1057 /* AppDelegate.swift in Sources */,
 				C7EA691C299C3AD7002A1057 /* SceneDelegate.swift in Sources */,
 			);
@@ -276,8 +290,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7EA693D299C3AD8002A1057 /* VenturusChallengeUITestsLaunchTests.swift in Sources */,
-				C7EA693B299C3AD8002A1057 /* VenturusChallengeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +309,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C7EA691F299C3AD7002A1057 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C7EA6920299C3AD7002A1057 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C7EA6924299C3AD8002A1057 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +446,6 @@
 				INFOPLIST_FILE = VenturusChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +473,6 @@
 				INFOPLIST_FILE = VenturusChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
