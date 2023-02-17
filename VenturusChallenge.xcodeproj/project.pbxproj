@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C799270029A005C500D43639 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79926FE29A005C500D43639 /* PhotoCell.swift */; };
+		C799270129A005C500D43639 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79926FF29A005C500D43639 /* PhotoCell.xib */; };
 		C7EA691A299C3AD7002A1057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6919299C3AD7002A1057 /* AppDelegate.swift */; };
 		C7EA691C299C3AD7002A1057 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA691B299C3AD7002A1057 /* SceneDelegate.swift */; };
 		C7EA6923299C3AD8002A1057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7EA6922299C3AD8002A1057 /* Assets.xcassets */; };
@@ -15,6 +17,10 @@
 		C7EA694A299C3AF0002A1057 /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6949299C3AF0002A1057 /* PhotoGalleryViewController.swift */; };
 		C7EA694F299C579B002A1057 /* PhotoGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA694D299C3B93002A1057 /* PhotoGalleryView.swift */; };
 		C7EA6950299C5FAB002A1057 /* PhotoGalleryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7EA694B299C3B48002A1057 /* PhotoGalleryView.xib */; };
+		C7EA695B299F9D81002A1057 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6956299F9D81002A1057 /* Endpoints.swift */; };
+		C7EA695C299F9D81002A1057 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6958299F9D81002A1057 /* WeatherResponse.swift */; };
+		C7EA695D299F9D81002A1057 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6959299F9D81002A1057 /* RemoteService.swift */; };
+		C7EA695E299F9D81002A1057 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA695A299F9D81002A1057 /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C79926FE29A005C500D43639 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		C79926FF29A005C500D43639 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		C7EA6916299C3AD7002A1057 /* VenturusChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenturusChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EA6919299C3AD7002A1057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7EA691B299C3AD7002A1057 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +55,10 @@
 		C7EA6949299C3AF0002A1057 /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
 		C7EA694B299C3B48002A1057 /* PhotoGalleryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoGalleryView.xib; sourceTree = "<group>"; };
 		C7EA694D299C3B93002A1057 /* PhotoGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryView.swift; sourceTree = "<group>"; };
+		C7EA6956299F9D81002A1057 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		C7EA6958299F9D81002A1057 /* WeatherResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		C7EA6959299F9D81002A1057 /* RemoteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
+		C7EA695A299F9D81002A1057 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +114,8 @@
 				C7EA6949299C3AF0002A1057 /* PhotoGalleryViewController.swift */,
 				C7EA694B299C3B48002A1057 /* PhotoGalleryView.xib */,
 				C7EA694D299C3B93002A1057 /* PhotoGalleryView.swift */,
+				C79926FE29A005C500D43639 /* PhotoCell.swift */,
+				C79926FF29A005C500D43639 /* PhotoCell.xib */,
 			);
 			path = VenturusChallenge;
 			sourceTree = "<group>";
@@ -136,8 +150,28 @@
 		C7EA6953299C600A002A1057 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				C7EA6955299F9D81002A1057 /* Service API */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		C7EA6955299F9D81002A1057 /* Service API */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA6956299F9D81002A1057 /* Endpoints.swift */,
+				C7EA6957299F9D81002A1057 /* Codable */,
+				C7EA6959299F9D81002A1057 /* RemoteService.swift */,
+				C7EA695A299F9D81002A1057 /* HTTPClient.swift */,
+			);
+			path = "Service API";
+			sourceTree = "<group>";
+		};
+		C7EA6957299F9D81002A1057 /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA6958299F9D81002A1057 /* WeatherResponse.swift */,
+			);
+			path = Codable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7EA6926299C3AD8002A1057 /* LaunchScreen.storyboard in Resources */,
+				C799270129A005C500D43639 /* PhotoCell.xib in Resources */,
 				C7EA6950299C5FAB002A1057 /* PhotoGalleryView.xib in Resources */,
 				C7EA6923299C3AD8002A1057 /* Assets.xcassets in Resources */,
 			);
@@ -272,9 +307,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7EA694A299C3AF0002A1057 /* PhotoGalleryViewController.swift in Sources */,
+				C7EA695C299F9D81002A1057 /* WeatherResponse.swift in Sources */,
+				C7EA695E299F9D81002A1057 /* HTTPClient.swift in Sources */,
 				C7EA694F299C579B002A1057 /* PhotoGalleryView.swift in Sources */,
+				C799270029A005C500D43639 /* PhotoCell.swift in Sources */,
 				C7EA691A299C3AD7002A1057 /* AppDelegate.swift in Sources */,
+				C7EA695D299F9D81002A1057 /* RemoteService.swift in Sources */,
 				C7EA691C299C3AD7002A1057 /* SceneDelegate.swift in Sources */,
+				C7EA695B299F9D81002A1057 /* Endpoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +483,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UYXMKT4M49;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VenturusChallenge/Info.plist;
+				INFOPLIST_FILE = VenturusChallenge/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -470,7 +510,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UYXMKT4M49;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VenturusChallenge/Info.plist;
+				INFOPLIST_FILE = VenturusChallenge/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
