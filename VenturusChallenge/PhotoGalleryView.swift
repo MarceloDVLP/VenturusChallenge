@@ -8,7 +8,8 @@ final class PhotoGalleryView: UIView {
     
     var response: SearchResponse?
     var service: RemoteService!
-
+    var items: [Item] = []
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
@@ -41,6 +42,15 @@ final class PhotoGalleryView: UIView {
             switch result {
             case .success(let response):
                 self.response = response
+                
+                self.response?.data.forEach({ data in
+                    let urls = data.images.filter({ $0.type == "image/png" || $0.type == "image/jpeg" }).map({ $0.link })
+                    let items = urls.map({ Item(image: ImageCache.publicCache.placeholderImage, url: $0) })
+                    self.items.append(contentsOf: items)
+                })
+                
+                self.collectionView.reloadData()
+                
             case .failure(_):
                 break
             }
@@ -48,19 +58,35 @@ final class PhotoGalleryView: UIView {
     }
     
     func makeLayout() -> UICollectionViewLayout {
-        let fraction: CGFloat = 1/3
-
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(fraction), heightDimension: .fractionalHeight(1))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-
-        let inset: CGFloat = 4
-        item.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
-
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(fraction))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-
-        let section = NSCollectionLayoutSection(group: group)
+        let inset: CGFloat = 2.5
+        
+        // Items
+        let largeItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1))
+        let largeItem = NSCollectionLayoutItem(layoutSize: largeItemSize)
+        largeItem.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
+        
+        let smallItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.5))
+        let smallItem = NSCollectionLayoutItem(layoutSize: smallItemSize)
+        smallItem.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
+        
+        // Nested Group
+        let nestedGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.25), heightDimension: .fractionalHeight(1))
+        let nestedGroup = NSCollectionLayoutGroup.vertical(layoutSize: nestedGroupSize, subitems: [smallItem])
+        
+        // Outer Group
+        let outerGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.5))
+        let outerGroup = NSCollectionLayoutGroup.horizontal(layoutSize: outerGroupSize, subitems: [largeItem, nestedGroup, nestedGroup])
+        
+        // Section
+        let section = NSCollectionLayoutSection(group: outerGroup)
         section.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
+        
+        // Supplementary Item
+        let headerItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(100))
+        let headerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerItemSize, elementKind: "header", alignment: .top)
+        section.boundarySupplementaryItems = [headerItem]
+         
+        section.orthogonalScrollingBehavior = .none
         return UICollectionViewCompositionalLayout(section: section)
     }
 }
@@ -68,13 +94,14 @@ final class PhotoGalleryView: UIView {
 
 extension PhotoGalleryView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.reuseIdentifier, for: indexPath)
-        cell.backgroundColor = .green
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.reuseIdentifier, for: indexPath) as! PhotoCell
+        let item = items[indexPath.item]
+        cell.configure(with: item)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        20
+        return items.count
     }
 }
 

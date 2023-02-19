@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C799270029A005C500D43639 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79926FE29A005C500D43639 /* PhotoCell.swift */; };
 		C799270129A005C500D43639 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79926FF29A005C500D43639 /* PhotoCell.xib */; };
+		C7B0875229A272BB00366EF5 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B0875129A272BB00366EF5 /* ImageCache.swift */; };
 		C7EA691A299C3AD7002A1057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6919299C3AD7002A1057 /* AppDelegate.swift */; };
 		C7EA691C299C3AD7002A1057 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA691B299C3AD7002A1057 /* SceneDelegate.swift */; };
 		C7EA6923299C3AD8002A1057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7EA6922299C3AD8002A1057 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		C79926FE29A005C500D43639 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		C79926FF29A005C500D43639 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		C7B0875129A272BB00366EF5 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		C7EA6916299C3AD7002A1057 /* VenturusChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenturusChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EA6919299C3AD7002A1057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7EA691B299C3AD7002A1057 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				C7EA694D299C3B93002A1057 /* PhotoGalleryView.swift */,
 				C79926FE29A005C500D43639 /* PhotoCell.swift */,
 				C79926FF29A005C500D43639 /* PhotoCell.xib */,
+				C7B0875129A272BB00366EF5 /* ImageCache.swift */,
 			);
 			path = VenturusChallenge;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7B0875229A272BB00366EF5 /* ImageCache.swift in Sources */,
 				C7EA694A299C3AF0002A1057 /* PhotoGalleryViewController.swift in Sources */,
 				C7EA695C299F9D81002A1057 /* WeatherResponse.swift in Sources */,
 				C7EA695E299F9D81002A1057 /* HTTPClient.swift in Sources */,
