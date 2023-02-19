@@ -4,7 +4,7 @@ final class PhotoGalleryView: UIView {
     
     var view: UIView!
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    private var collectionView: UICollectionView!
     
     var response: SearchResponse?
     var service: RemoteService!
@@ -16,45 +16,16 @@ final class PhotoGalleryView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        loadViewFromNib()
-        fetchData()
+        collectionView = UICollectionView(frame: frame, collectionViewLayout: makeLayout())
+        collectionView.dataSource = self
         collectionView.collectionViewLayout = makeLayout()
-        let nib = UINib(nibName: PhotoCell.reuseIdentifier, bundle: Bundle.main)
-        collectionView.register(nib, forCellWithReuseIdentifier: PhotoCell.reuseIdentifier) //(PhotoCell.self,
+        collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: PhotoCell.reuseIdentifier) //(PhotoCell.self,
+        collectionView.pinView(in: self)
     }
     
-    func loadViewFromNib() {
-            let bundle = Bundle(for: type(of: self))
-            let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
-            let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
-            view.frame = bounds
-            view.autoresizingMask = [
-                UIView.AutoresizingMask.flexibleWidth,
-                UIView.AutoresizingMask.flexibleHeight
-            ]
-            addSubview(view)
-            self.view = view
-    }
-    
-    func fetchData() {
-        service = RemoteService(client: HTTPClient(session: URLSession.shared))
-        service.fetch(id: 0, completion: { result in
-            switch result {
-            case .success(let response):
-                self.response = response
-                
-                self.response?.data.forEach({ data in
-                    let urls = data.images.filter({ $0.type == "image/png" || $0.type == "image/jpeg" }).map({ $0.link })
-                    let items = urls.map({ Item(image: ImageCache.publicCache.placeholderImage, url: $0) })
-                    self.items.append(contentsOf: items)
-                })
-                
-                self.collectionView.reloadData()
-                
-            case .failure(_):
-                break
-            }
-        })
+    func show(_ items: [URL]) {
+        self.items = items.map({ Item(image: ImageCache.publicCache.placeholderImage, url: $0) })
+        collectionView.reloadData()
     }
     
     func makeLayout() -> UICollectionViewLayout {
@@ -110,4 +81,18 @@ extension PhotoGalleryView: UICollectionViewDelegate {
 }
 
 
+extension UIView {
+    
+    func pinView(in superview: UIView) {
+        translatesAutoresizingMaskIntoConstraints = false
+        superview.addSubview(self)
+
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor),
+            leadingAnchor.constraint(equalTo: superview.leadingAnchor),
+            trailingAnchor.constraint(equalTo: superview.trailingAnchor),
+            bottomAnchor.constraint(equalTo: superview.bottomAnchor)
+        ])
+    }
+}
 

@@ -1,5 +1,6 @@
 import UIKit
 import Foundation
+
 public class ImageCache {
     
     public static let publicCache = ImageCache()

@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C799270029A005C500D43639 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79926FE29A005C500D43639 /* PhotoCell.swift */; };
-		C799270129A005C500D43639 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79926FF29A005C500D43639 /* PhotoCell.xib */; };
 		C7B0875229A272BB00366EF5 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B0875129A272BB00366EF5 /* ImageCache.swift */; };
+		C7B0875429A2CB9C00366EF5 /* PhotoGalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B0875329A2CB9C00366EF5 /* PhotoGalleryInteractor.swift */; };
+		C7B0875629A2D06D00366EF5 /* PhotoGalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B0875529A2D06D00366EF5 /* PhotoGalleryPresenter.swift */; };
 		C7EA691A299C3AD7002A1057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6919299C3AD7002A1057 /* AppDelegate.swift */; };
 		C7EA691C299C3AD7002A1057 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA691B299C3AD7002A1057 /* SceneDelegate.swift */; };
 		C7EA6923299C3AD8002A1057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7EA6922299C3AD8002A1057 /* Assets.xcassets */; };
@@ -17,7 +18,6 @@
 		C7EA6931299C3AD8002A1057 /* VenturusChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6930299C3AD8002A1057 /* VenturusChallengeTests.swift */; };
 		C7EA694A299C3AF0002A1057 /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6949299C3AF0002A1057 /* PhotoGalleryViewController.swift */; };
 		C7EA694F299C579B002A1057 /* PhotoGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA694D299C3B93002A1057 /* PhotoGalleryView.swift */; };
-		C7EA6950299C5FAB002A1057 /* PhotoGalleryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7EA694B299C3B48002A1057 /* PhotoGalleryView.xib */; };
 		C7EA695B299F9D81002A1057 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6956299F9D81002A1057 /* Endpoints.swift */; };
 		C7EA695C299F9D81002A1057 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6958299F9D81002A1057 /* WeatherResponse.swift */; };
 		C7EA695D299F9D81002A1057 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6959299F9D81002A1057 /* RemoteService.swift */; };
@@ -43,8 +43,9 @@
 
 /* Begin PBXFileReference section */
 		C79926FE29A005C500D43639 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
-		C79926FF29A005C500D43639 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		C7B0875129A272BB00366EF5 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		C7B0875329A2CB9C00366EF5 /* PhotoGalleryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryInteractor.swift; sourceTree = "<group>"; };
+		C7B0875529A2D06D00366EF5 /* PhotoGalleryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryPresenter.swift; sourceTree = "<group>"; };
 		C7EA6916299C3AD7002A1057 /* VenturusChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenturusChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EA6919299C3AD7002A1057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7EA691B299C3AD7002A1057 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		C7EA6930299C3AD8002A1057 /* VenturusChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenturusChallengeTests.swift; sourceTree = "<group>"; };
 		C7EA6936299C3AD8002A1057 /* VenturusChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenturusChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EA6949299C3AF0002A1057 /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
-		C7EA694B299C3B48002A1057 /* PhotoGalleryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoGalleryView.xib; sourceTree = "<group>"; };
 		C7EA694D299C3B93002A1057 /* PhotoGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryView.swift; sourceTree = "<group>"; };
 		C7EA6956299F9D81002A1057 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		C7EA6958299F9D81002A1057 /* WeatherResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
@@ -88,6 +88,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C740049729A2DD000074E9AD /* PhotoDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoDetail;
+			sourceTree = "<group>";
+		};
+		C7B0875729A2D08C00366EF5 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				C7B0875929A2D0B500366EF5 /* View */,
+				C7B0875529A2D06D00366EF5 /* PhotoGalleryPresenter.swift */,
+				C7EA6949299C3AF0002A1057 /* PhotoGalleryViewController.swift */,
+				C7B0875129A272BB00366EF5 /* ImageCache.swift */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		C7B0875829A2D09600366EF5 /* Business Logic */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA6955299F9D81002A1057 /* RemoteService */,
+				C7B0875329A2CB9C00366EF5 /* PhotoGalleryInteractor.swift */,
+			);
+			path = "Business Logic";
+			sourceTree = "<group>";
+		};
+		C7B0875929A2D0B500366EF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA694D299C3B93002A1057 /* PhotoGalleryView.swift */,
+				C79926FE29A005C500D43639 /* PhotoCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C7EA690D299C3AD7002A1057 = {
 			isa = PBXGroup;
 			children = (
@@ -110,15 +146,10 @@
 		C7EA6918299C3AD7002A1057 /* VenturusChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				C7EA6953299C600A002A1057 /* Features */,
+				C740049729A2DD000074E9AD /* PhotoDetail */,
+				C7EA6953299C600A002A1057 /* PhotoGallery */,
 				C7EA6952299C5FD7002A1057 /* Resources */,
 				C7EA6951299C5FCA002A1057 /* Application */,
-				C7EA6949299C3AF0002A1057 /* PhotoGalleryViewController.swift */,
-				C7EA694B299C3B48002A1057 /* PhotoGalleryView.xib */,
-				C7EA694D299C3B93002A1057 /* PhotoGalleryView.swift */,
-				C79926FE29A005C500D43639 /* PhotoCell.swift */,
-				C79926FF29A005C500D43639 /* PhotoCell.xib */,
-				C7B0875129A272BB00366EF5 /* ImageCache.swift */,
 			);
 			path = VenturusChallenge;
 			sourceTree = "<group>";
@@ -150,28 +181,29 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		C7EA6953299C600A002A1057 /* Features */ = {
+		C7EA6953299C600A002A1057 /* PhotoGallery */ = {
 			isa = PBXGroup;
 			children = (
-				C7EA6955299F9D81002A1057 /* Service API */,
+				C7B0875829A2D09600366EF5 /* Business Logic */,
+				C7B0875729A2D08C00366EF5 /* User Interface */,
 			);
-			path = Features;
+			path = PhotoGallery;
 			sourceTree = "<group>";
 		};
-		C7EA6955299F9D81002A1057 /* Service API */ = {
+		C7EA6955299F9D81002A1057 /* RemoteService */ = {
 			isa = PBXGroup;
 			children = (
-				C7EA6956299F9D81002A1057 /* Endpoints.swift */,
 				C7EA6957299F9D81002A1057 /* Codable */,
 				C7EA6959299F9D81002A1057 /* RemoteService.swift */,
 				C7EA695A299F9D81002A1057 /* HTTPClient.swift */,
 			);
-			path = "Service API";
+			path = RemoteService;
 			sourceTree = "<group>";
 		};
 		C7EA6957299F9D81002A1057 /* Codable */ = {
 			isa = PBXGroup;
 			children = (
+				C7EA6956299F9D81002A1057 /* Endpoints.swift */,
 				C7EA6958299F9D81002A1057 /* WeatherResponse.swift */,
 			);
 			path = Codable;
@@ -282,8 +314,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7EA6926299C3AD8002A1057 /* LaunchScreen.storyboard in Resources */,
-				C799270129A005C500D43639 /* PhotoCell.xib in Resources */,
-				C7EA6950299C5FAB002A1057 /* PhotoGalleryView.xib in Resources */,
 				C7EA6923299C3AD8002A1057 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,9 +343,11 @@
 				C7EA694A299C3AF0002A1057 /* PhotoGalleryViewController.swift in Sources */,
 				C7EA695C299F9D81002A1057 /* WeatherResponse.swift in Sources */,
 				C7EA695E299F9D81002A1057 /* HTTPClient.swift in Sources */,
+				C7B0875429A2CB9C00366EF5 /* PhotoGalleryInteractor.swift in Sources */,
 				C7EA694F299C579B002A1057 /* PhotoGalleryView.swift in Sources */,
 				C799270029A005C500D43639 /* PhotoCell.swift in Sources */,
 				C7EA691A299C3AD7002A1057 /* AppDelegate.swift in Sources */,
+				C7B0875629A2D06D00366EF5 /* PhotoGalleryPresenter.swift in Sources */,
 				C7EA695D299F9D81002A1057 /* RemoteService.swift in Sources */,
 				C7EA691C299C3AD7002A1057 /* SceneDelegate.swift in Sources */,
 				C7EA695B299F9D81002A1057 /* Endpoints.swift in Sources */,
