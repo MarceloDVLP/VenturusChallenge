@@ -30,11 +30,9 @@ final class PhotoCell: UICollectionViewCell {
     }
     
     func configure(with item: Item) {
-        DispatchQueue.global(qos: .background).async {
-            ImageCache.publicCache.load(url: item.url as NSURL, item: item) { (fetchedItem, image) in
-                self.imageView.image = image
-            }
-        }
+        ImageCache.publicCache.load(url: item.url as NSURL, item: item) { (fetchedItem, image) in
+            self.imageView.image = image
+        }        
     }
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C740049929A2DD200074E9AD /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740049829A2DD200074E9AD /* PhotoDetailViewController.swift */; };
+		C740049B29A2E9D90074E9AD /* PhotoGalleryViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740049A29A2E9D90074E9AD /* PhotoGalleryViewControllerBuilder.swift */; };
 		C799270029A005C500D43639 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79926FE29A005C500D43639 /* PhotoCell.swift */; };
 		C7B0875229A272BB00366EF5 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B0875129A272BB00366EF5 /* ImageCache.swift */; };
 		C7B0875429A2CB9C00366EF5 /* PhotoGalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B0875329A2CB9C00366EF5 /* PhotoGalleryInteractor.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C740049829A2DD200074E9AD /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		C740049A29A2E9D90074E9AD /* PhotoGalleryViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewControllerBuilder.swift; sourceTree = "<group>"; };
 		C79926FE29A005C500D43639 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		C7B0875129A272BB00366EF5 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		C7B0875329A2CB9C00366EF5 /* PhotoGalleryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryInteractor.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 		C740049729A2DD000074E9AD /* PhotoDetail */ = {
 			isa = PBXGroup;
 			children = (
+				C740049829A2DD200074E9AD /* PhotoDetailViewController.swift */,
 			);
 			path = PhotoDetail;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 			children = (
 				C7B0875829A2D09600366EF5 /* Business Logic */,
 				C7B0875729A2D08C00366EF5 /* User Interface */,
+				C740049A29A2E9D90074E9AD /* PhotoGalleryViewControllerBuilder.swift */,
 			);
 			path = PhotoGallery;
 			sourceTree = "<group>";
@@ -344,10 +350,12 @@
 				C7EA695C299F9D81002A1057 /* WeatherResponse.swift in Sources */,
 				C7EA695E299F9D81002A1057 /* HTTPClient.swift in Sources */,
 				C7B0875429A2CB9C00366EF5 /* PhotoGalleryInteractor.swift in Sources */,
+				C740049929A2DD200074E9AD /* PhotoDetailViewController.swift in Sources */,
 				C7EA694F299C579B002A1057 /* PhotoGalleryView.swift in Sources */,
 				C799270029A005C500D43639 /* PhotoCell.swift in Sources */,
 				C7EA691A299C3AD7002A1057 /* AppDelegate.swift in Sources */,
 				C7B0875629A2D06D00366EF5 /* PhotoGalleryPresenter.swift in Sources */,
+				C740049B29A2E9D90074E9AD /* PhotoGalleryViewControllerBuilder.swift in Sources */,
 				C7EA695D299F9D81002A1057 /* RemoteService.swift in Sources */,
 				C7EA691C299C3AD7002A1057 /* SceneDelegate.swift in Sources */,
 				C7EA695B299F9D81002A1057 /* Endpoints.swift in Sources */,

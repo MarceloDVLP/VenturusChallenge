@@ -6,9 +6,13 @@ protocol PhotoGalleryInteractorProtocol {
 }
 
 protocol PhotoGalleryInteractorDelegate {
-    func show(_ items: [URL])
+    func show(_ items: [Photo])
 }
 
+struct Photo {
+    let title: String?
+    let url: URL
+}
 
 final class PhotoGalleryInteractor: PhotoGalleryInteractorProtocol {
     
@@ -25,11 +29,11 @@ final class PhotoGalleryInteractor: PhotoGalleryInteractorProtocol {
             switch result {
             case .success(let response):
                 
-                var items: [URL] = []
+                var items: [Photo] = []
                 
                 response.data.forEach({ data in
-                    let urls = data.images.filter({ $0.type == "image/png" || $0.type == "image/jpeg" }).map({ $0.link })
-                    items.append(contentsOf: urls)
+                    let photos = data.images.filter({ $0.type == "image/png" || $0.type == "image/jpeg" }).map({ Photo(title: data.title, url: $0.link)})
+                    items.append(contentsOf: photos)
                 })
                 
                 self?.presenter?.show(items)
@@ -38,29 +42,5 @@ final class PhotoGalleryInteractor: PhotoGalleryInteractorProtocol {
                 break
             }
         })
-    }
-}
-
-
-
-
-
-
-
-final class PhotoGalleryViewControllerBuilder {
-    
-    static func make() -> PhotoGalleryViewController {
-        let session = URLSession(configuration: URLSessionConfiguration.default)
-        let clientHTTP = HTTPClient(session: session)
-        let service = RemoteService(client: clientHTTP)
-        let interactor = PhotoGalleryInteractor(service: service)
-
-        let presenter = PhotoGalleryPresenter(interactor: interactor)
-        interactor.presenter = presenter
-        
-        let viewController = PhotoGalleryViewController(presenter: presenter)
-        presenter.viewController = viewController
-        
-        return viewController
     }
 }

@@ -3,25 +3,13 @@ import Foundation
 struct SearchResponse: Codable, Equatable {
     let data: [SearchResponseData]
     let success: Bool
-    let status: Int
-    
-//    enum CodingKeys: String, CodingKey {
-//        case title = "title"
-//        case locationType = "location_type"
-//        case consolidated = "consolidated_weather"
-//    }
+    let status: Int    
 }
 
 struct SearchResponseData: Codable, Equatable {
     let id: String
     let title: String
     let images: [SearchResponseImage]
-    
-//    enum CodingKeys: String, CodingKey {
-//        case stateName = "weather_state_name"
-//        case stateAbbr = "weather_state_abbr"
-//        case applicableData = "applicable_date"
-//    }
 }
 
 struct SearchResponseImage: Codable, Equatable {

@@ -1,14 +1,12 @@
 import UIKit
 
 final class PhotoGalleryView: UIView {
-    
-    var view: UIView!
-    
+        
     private var collectionView: UICollectionView!
     
-    var response: SearchResponse?
-    var service: RemoteService!
     var items: [Item] = []
+    
+    var didSelect: ((Item) -> ())?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -18,13 +16,15 @@ final class PhotoGalleryView: UIView {
         super.init(frame: frame)
         collectionView = UICollectionView(frame: frame, collectionViewLayout: makeLayout())
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.collectionViewLayout = makeLayout()
-        collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: PhotoCell.reuseIdentifier) //(PhotoCell.self,
+        
+        collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: PhotoCell.reuseIdentifier)
         collectionView.pinView(in: self)
     }
     
-    func show(_ items: [URL]) {
-        self.items = items.map({ Item(image: ImageCache.publicCache.placeholderImage, url: $0) })
+    func show(_ items: [Photo]) {
+        self.items = items.map({ Item(image: ImageCache.publicCache.placeholderImage, url: $0.url, title: $0.title) })
         collectionView.reloadData()
     }
     
@@ -51,13 +51,7 @@ final class PhotoGalleryView: UIView {
         // Section
         let section = NSCollectionLayoutSection(group: outerGroup)
         section.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
-        
-        // Supplementary Item
-        let headerItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(100))
-        let headerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerItemSize, elementKind: "header", alignment: .top)
-        section.boundarySupplementaryItems = [headerItem]
-         
-        section.orthogonalScrollingBehavior = .none
+                 
         return UICollectionViewCompositionalLayout(section: section)
     }
 }
@@ -78,6 +72,10 @@ extension PhotoGalleryView: UICollectionViewDataSource {
 
 extension PhotoGalleryView: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = items[indexPath.item]
+        didSelect?(item)
+    }
 }
 
 

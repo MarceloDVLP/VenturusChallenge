@@ -58,6 +58,7 @@ class Item: Hashable {
     
     var image: UIImage!
     let url: URL!
+    var title: String?
     let identifier = UUID()
     
     func hash(into hasher: inout Hasher) {
@@ -67,9 +68,10 @@ class Item: Hashable {
         return lhs.identifier == rhs.identifier
     }
     
-    init(image: UIImage, url: URL) {
+    init(image: UIImage, url: URL, title: String?) {
         self.image = image
         self.url = url
+        self.title = title
     }
 
 }
