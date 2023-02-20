@@ -2,7 +2,7 @@ import UIKit
 
 final class PhotoItem: Hashable {
 
-    let url: URL
+    var url: URL?
     let identifier = UUID()
     var image: UIImage?
     var title: String?
@@ -15,7 +15,7 @@ final class PhotoItem: Hashable {
         return lhs.identifier == rhs.identifier
     }
     
-    init(image: UIImage?, url: URL, title: String?) {
+    init(image: UIImage? = nil, url: URL? = nil, title: String? = nil) {
         self.image = image
         self.url = url
         self.title = title

@@ -1,10 +1,3 @@
-//
-//  RemoteService.swift
-//  WeatherAppTests
-//
-//  Created by Marcelo Carvalho on 20/01/23.
-//
-
 import Foundation
 
 protocol RemoteServiceProtocol {
@@ -30,7 +23,7 @@ final class RemoteService: RemoteServiceProtocol {
             case .success(let data):
                 let decoded = self.decode(data)
                 completion(decoded)
-            case .failure(_ ):
+            case .failure(_):
                 completion(.failure(.serverError))
             }
         })

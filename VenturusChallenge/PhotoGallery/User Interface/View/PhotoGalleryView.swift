@@ -23,6 +23,7 @@ final class PhotoGalleryView: UIView {
         super.init(frame: frame)
         collectionView.delegate = self
         collectionView.pinView(in: self)
+        
     }
     
     func cellRegistration() -> UICollectionView.CellRegistration<PhotoCell, PhotoItem> {
@@ -90,11 +91,19 @@ final class PhotoGalleryView: UIView {
         return UICollectionViewCompositionalLayout(section: section)
     }
     
-    func applySnapshot(animatingDifferences: Bool = true) {
+    private func applySnapshot(animatingDifferences: Bool = true) {
         var snapshot = Snapshot()
         snapshot.appendSections([.main])
         snapshot.appendItems(items)
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
+    }
+    
+    func showLoadingItems() {
+        let loadingCells: Int = 20
+        for _ in 0...loadingCells {
+            items += [PhotoItem()]
+        }
+        applySnapshot(animatingDifferences: true)
     }
     
     required init?(coder: NSCoder) {

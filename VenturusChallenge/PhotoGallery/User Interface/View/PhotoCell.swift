@@ -35,7 +35,9 @@ final class PhotoCell: UICollectionViewCell {
 
         imageView.image = item.image
 
-        _ = ImageCache.publicCache.load(url: item.url as NSURL, item: item) { [weak self] (fetchedItem, image) in
+        guard let url = item.url else { return }
+        
+        _ = ImageCache.publicCache.load(url: url as NSURL, item: item) { [weak self] (fetchedItem, image) in
             if let img = image, img != fetchedItem.image {
                 self?.updateCell?(fetchedItem, img)
             }

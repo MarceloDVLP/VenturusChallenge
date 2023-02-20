@@ -25,10 +25,12 @@ final class PhotoDetailViewController: UIViewController {
         constraintImageView()
         constraintNameLabel()
         view.backgroundColor = .white
-                
-        let image = ImageCache.publicCache.image(url: item.url as NSURL)
-        imageView.image = image
         nameLabel.text = item.title
+
+        guard let url = item.url as? NSURL else { return }
+        
+        let image = ImageCache.publicCache.image(url: url)
+        imageView.image = image
     }
     
     required init?(coder: NSCoder) {

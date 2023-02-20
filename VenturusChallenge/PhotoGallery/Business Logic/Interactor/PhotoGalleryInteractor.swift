@@ -6,6 +6,7 @@ protocol PhotoGalleryInteractorProtocol {
 
 protocol PhotoGalleryInteractorDelegate {
     func show(_ items: [Photo])
+    func showTryAgain()
 }
 
 final class PhotoGalleryInteractor: PhotoGalleryInteractorProtocol {
@@ -33,7 +34,7 @@ final class PhotoGalleryInteractor: PhotoGalleryInteractorProtocol {
                 self?.presenter?.show(items)
                 
             case .failure(_):
-                break
+                self?.presenter?.showTryAgain()
             }
         })
     }
