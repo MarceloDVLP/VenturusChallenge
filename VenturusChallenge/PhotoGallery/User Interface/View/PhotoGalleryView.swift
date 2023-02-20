@@ -1,5 +1,9 @@
 import UIKit
 
+enum Section {
+    case main
+}
+
 final class PhotoGalleryView: UIView {
         
     private var collectionView: UICollectionView!
@@ -8,6 +12,11 @@ final class PhotoGalleryView: UIView {
     
     var didSelect: ((PhotoItem) -> ())?
     
+    typealias DataSource = UICollectionViewDiffableDataSource<Section, PhotoItem>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, PhotoItem>
+
+    private lazy var dataSource = makeDataSource()
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
@@ -15,17 +24,17 @@ final class PhotoGalleryView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         collectionView = UICollectionView(frame: frame, collectionViewLayout: makeLayout())
-        collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.collectionViewLayout = makeLayout()
-        
+        collectionView.dataSource = dataSource
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: PhotoCell.reuseIdentifier)
         collectionView.pinView(in: self)
     }
     
     func show(_ items: [Photo]) {
         self.items = items.map({ PhotoItem(image: ImageCache.publicCache.placeholderImage, url: $0.url, title: $0.title) })
-        collectionView.reloadData()
+
+        applySnapshot(animatingDifferences: true)
     }
     
     func makeLayout() -> UICollectionViewLayout {
@@ -54,26 +63,33 @@ final class PhotoGalleryView: UIView {
                  
         return UICollectionViewCompositionalLayout(section: section)
     }
-}
-
-
-extension PhotoGalleryView: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.reuseIdentifier, for: indexPath) as! PhotoCell
-        let item = items[indexPath.item]
-        cell.configure(with: item)
-        return cell
+    
+    func makeDataSource() -> DataSource {
+        let dataSource = DataSource(collectionView: collectionView,
+                                    cellProvider: { (collectionView, indexPath, item) -> UICollectionViewCell? in
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.reuseIdentifier, for: indexPath) as? PhotoCell
+            cell?.configure(with: item)
+            return cell
+        })
+        
+        return dataSource
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+    func applySnapshot(animatingDifferences: Bool = true) {
+        var snapshot = Snapshot()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(items)
+        dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
 }
 
 extension PhotoGalleryView: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let item = items[indexPath.item]
+        guard let item = dataSource.itemIdentifier(for: indexPath) else {
+          return
+        }
         didSelect?(item)
     }
 }

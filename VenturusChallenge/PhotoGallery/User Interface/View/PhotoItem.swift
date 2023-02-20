@@ -10,6 +10,7 @@ final class PhotoItem: Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(identifier)
     }
+    
     static func == (lhs: PhotoItem, rhs: PhotoItem) -> Bool {
         return lhs.identifier == rhs.identifier
     }
