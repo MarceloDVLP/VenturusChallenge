@@ -5,30 +5,55 @@ enum Section {
 }
 
 final class PhotoGalleryView: UIView {
-        
-    private var collectionView: UICollectionView!
+
+    typealias DataSource = UICollectionViewDiffableDataSource<Section, PhotoItem>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, PhotoItem>
+
+    private lazy var collectionView: UICollectionView = {
+        return UICollectionView(frame: frame, collectionViewLayout: makeLayout())
+    }()
     
     var items: [PhotoItem] = []
     
     var didSelect: ((PhotoItem) -> ())?
     
-    typealias DataSource = UICollectionViewDiffableDataSource<Section, PhotoItem>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, PhotoItem>
-
-    private lazy var dataSource = makeDataSource()
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
+    private lazy var dataSource: DataSource = makeDataSource()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        collectionView = UICollectionView(frame: frame, collectionViewLayout: makeLayout())
         collectionView.delegate = self
-        collectionView.collectionViewLayout = makeLayout()
-        collectionView.dataSource = dataSource
-        collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: PhotoCell.reuseIdentifier)
         collectionView.pinView(in: self)
+    }
+    
+    func cellRegistration() -> UICollectionView.CellRegistration<PhotoCell, PhotoItem> {
+        return UICollectionView.CellRegistration<PhotoCell, PhotoItem> { (cell, indexPath, item) in
+            
+            cell.imageView.image = item.image
+                                    
+            _ = ImageCache.publicCache.load(url: item.url as NSURL, item: item) { (fetchedItem, image) in
+                if let img = image, img != fetchedItem.image {
+                    var updatedSnapshot = self.dataSource.snapshot()
+                    if let datasourceIndex = updatedSnapshot.indexOfItem(fetchedItem) {
+                        let item = self.items[datasourceIndex]
+                        item.image = img
+                        updatedSnapshot.reloadItems([item])
+                        self.dataSource.apply(updatedSnapshot, animatingDifferences: true)
+                    }
+                }
+            }
+        }
+    }
+    
+    func makeDataSource() -> DataSource {
+        let cellRegistration = cellRegistration()
+        
+        return UICollectionViewDiffableDataSource<Section, PhotoItem>(collectionView: collectionView) {
+            
+            (collectionView: UICollectionView, indexPath: IndexPath, item: PhotoItem) -> UICollectionViewCell? in
+            
+            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration,
+                                                                for: indexPath, item: item)
+        }
     }
     
     func show(_ items: [Photo]) {
@@ -63,24 +88,16 @@ final class PhotoGalleryView: UIView {
                  
         return UICollectionViewCompositionalLayout(section: section)
     }
-    
-    func makeDataSource() -> DataSource {
-        let dataSource = DataSource(collectionView: collectionView,
-                                    cellProvider: { (collectionView, indexPath, item) -> UICollectionViewCell? in
-            
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.reuseIdentifier, for: indexPath) as? PhotoCell
-            cell?.configure(with: item)
-            return cell
-        })
         
-        return dataSource
-    }
-    
     func applySnapshot(animatingDifferences: Bool = true) {
         var snapshot = Snapshot()
         snapshot.appendSections([.main])
         snapshot.appendItems(items)
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError()
     }
 }
 
@@ -94,19 +111,4 @@ extension PhotoGalleryView: UICollectionViewDelegate {
     }
 }
 
-
-extension UIView {
-    
-    func pinView(in superview: UIView) {
-        translatesAutoresizingMaskIntoConstraints = false
-        superview.addSubview(self)
-
-        NSLayoutConstraint.activate([
-            topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor),
-            leadingAnchor.constraint(equalTo: superview.leadingAnchor),
-            trailingAnchor.constraint(equalTo: superview.trailingAnchor),
-            bottomAnchor.constraint(equalTo: superview.bottomAnchor)
-        ])
-    }
-}
 
