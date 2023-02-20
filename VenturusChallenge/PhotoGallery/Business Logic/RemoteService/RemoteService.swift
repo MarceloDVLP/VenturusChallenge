@@ -8,7 +8,7 @@
 import Foundation
 
 protocol RemoteServiceProtocol {
-    func fetch(id: Int, completion: @escaping (ServiceResult) -> ())
+    func fetch(completion: @escaping (ServiceResult) -> ())
 }
 
 typealias ServiceResult = Result<SearchResponse, RemoteServiceError>
@@ -21,7 +21,7 @@ final class RemoteService: RemoteServiceProtocol {
         self.client = client
     }
 
-    func fetch(id: Int, completion: @escaping (ServiceResult) -> ()) {
+    func fetch(completion: @escaping (ServiceResult) -> ()) {
         let url = Endpoints.url
 
         client.request(url: url, completion: { [weak self] result in

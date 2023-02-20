@@ -1,10 +1,10 @@
 import UIKit
 
-enum Section {
-    case main
-}
-
 final class PhotoGalleryView: UIView {
+        
+    enum Section {
+        case main
+    }
 
     typealias DataSource = UICollectionViewDiffableDataSource<Section, PhotoItem>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, PhotoItem>
@@ -28,17 +28,19 @@ final class PhotoGalleryView: UIView {
     func cellRegistration() -> UICollectionView.CellRegistration<PhotoCell, PhotoItem> {
         return UICollectionView.CellRegistration<PhotoCell, PhotoItem> { (cell, indexPath, item) in
             
-            cell.imageView.image = item.image
-                                    
-            _ = ImageCache.publicCache.load(url: item.url as NSURL, item: item) { (fetchedItem, image) in
-                if let img = image, img != fetchedItem.image {
-                    var updatedSnapshot = self.dataSource.snapshot()
-                    if let datasourceIndex = updatedSnapshot.indexOfItem(fetchedItem) {
-                        let item = self.items[datasourceIndex]
-                        item.image = img
-                        updatedSnapshot.reloadItems([item])
-                        self.dataSource.apply(updatedSnapshot, animatingDifferences: true)
-                    }
+            cell.load(with: item)
+            
+            cell.updateCell = { [weak self] item, img in
+
+                guard let self = self else { return }
+                
+                var updatedSnapshot = self.dataSource.snapshot()
+                if let datasourceIndex = updatedSnapshot.indexOfItem(item) {
+                    let item = self.items[datasourceIndex]
+                    item.image = img
+                    updatedSnapshot.reloadItems([item])
+                    self.dataSource.apply(updatedSnapshot, animatingDifferences: true)
+                    cell.stopShimmeringEffect()
                 }
             }
         }
@@ -57,8 +59,7 @@ final class PhotoGalleryView: UIView {
     }
     
     func show(_ items: [Photo]) {
-        self.items = items.map({ PhotoItem(image: ImageCache.publicCache.placeholderImage, url: $0.url, title: $0.title) })
-
+        self.items = items.map({ PhotoItem(image: nil, url: $0.url, title: $0.title) })
         applySnapshot(animatingDifferences: true)
     }
     
@@ -88,7 +89,7 @@ final class PhotoGalleryView: UIView {
                  
         return UICollectionViewCompositionalLayout(section: section)
     }
-        
+    
     func applySnapshot(animatingDifferences: Bool = true) {
         var snapshot = Snapshot()
         snapshot.appendSections([.main])

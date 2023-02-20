@@ -15,21 +15,14 @@ final class PhotoGalleryViewController: UIViewController {
         super.viewDidLoad()
         addPhotoView()
         presenter.viewDidLoad()
-        photoView.didSelect = { [weak self] item in
-            self?.presenter.didSelectItem(item)
-        }
     }
     
     func addPhotoView() {
-        photoView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(photoView)
         view.backgroundColor = .white
-        NSLayoutConstraint.activate([
-            photoView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            photoView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            photoView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            photoView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+        photoView.pinView(in: view)        
+        photoView.didSelect = { [weak self] item in
+            self?.presenter.didSelectItem(item)
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -42,16 +35,5 @@ extension PhotoGalleryViewController: PhotoGalleryPresenterDelegate {
 
     func show(_ items: [Photo]) {
         photoView.show(items)
-    }
-}
-
-
-final class PhotoGalleryRouter {
-    
-    weak var viewController: PhotoGalleryViewController?
-    
-    func showDetail(_ item: PhotoItem) {
-        let detailViewController = PhotoDetailViewController(item)
-        viewController?.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

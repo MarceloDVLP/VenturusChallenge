@@ -1,17 +1,11 @@
 import Foundation
 
-
 protocol PhotoGalleryInteractorProtocol {
     func fetchImages()
 }
 
 protocol PhotoGalleryInteractorDelegate {
     func show(_ items: [Photo])
-}
-
-struct Photo {
-    let title: String?
-    let url: URL
 }
 
 final class PhotoGalleryInteractor: PhotoGalleryInteractorProtocol {
@@ -25,7 +19,7 @@ final class PhotoGalleryInteractor: PhotoGalleryInteractorProtocol {
     }
     
     func fetchImages() {
-        service.fetch(id: 0, completion: { [weak self] result in
+        service.fetch(completion: { [weak self] result in
             switch result {
             case .success(let response):
                 

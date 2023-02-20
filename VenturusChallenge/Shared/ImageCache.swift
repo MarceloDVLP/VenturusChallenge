@@ -4,7 +4,7 @@ import Foundation
 public class ImageCache {
     
     public static let publicCache = ImageCache()
-    var placeholderImage = UIImage(named: "placeholder")!
+    var placeholderImage = UIImage(named: "placeholder")
     private let cachedImages = NSCache<NSURL, UIImage>()
     private var loadingResponses = [NSURL: [(PhotoItem, UIImage?) -> Swift.Void]]()
     
