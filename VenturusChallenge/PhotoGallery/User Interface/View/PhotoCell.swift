@@ -8,6 +8,8 @@ final class PhotoCell: UICollectionViewCell {
         return imageView
     }()
     
+    var task: URLSessionDataTask?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         imageView.pinView(in: self)
@@ -21,6 +23,8 @@ final class PhotoCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         imageView.image = nil
+//        task?.cancel()
+//        task = nil
     }
     
     override func layoutSubviews() {
@@ -29,8 +33,8 @@ final class PhotoCell: UICollectionViewCell {
         layer.borderColor = UIColor.black.cgColor
     }
     
-    func configure(with item: Item) {
-        ImageCache.publicCache.load(url: item.url as NSURL, item: item) { (fetchedItem, image) in
+    func configure(with item: PhotoItem) {
+        self.task = ImageCache.publicCache.load(url: item.url as NSURL, item: item) { (fetchedItem, image) in
             self.imageView.image = image
         }        
     }

@@ -4,9 +4,9 @@ final class PhotoGalleryView: UIView {
         
     private var collectionView: UICollectionView!
     
-    var items: [Item] = []
+    var items: [PhotoItem] = []
     
-    var didSelect: ((Item) -> ())?
+    var didSelect: ((PhotoItem) -> ())?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -24,7 +24,7 @@ final class PhotoGalleryView: UIView {
     }
     
     func show(_ items: [Photo]) {
-        self.items = items.map({ Item(image: ImageCache.publicCache.placeholderImage, url: $0.url, title: $0.title) })
+        self.items = items.map({ PhotoItem(image: ImageCache.publicCache.placeholderImage, url: $0.url, title: $0.title) })
         collectionView.reloadData()
     }
     

@@ -2,7 +2,7 @@ import UIKit
 
 final class PhotoDetailViewController: UIViewController {
 
-    private var item: Item
+    private var item: PhotoItem
     
     private var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -19,7 +19,7 @@ final class PhotoDetailViewController: UIViewController {
         return label
     }()
     
-    init(_ item: Item) {
+    init(_ item: PhotoItem) {
         self.item = item
         super.init(nibName: nil, bundle: nil)
         constraintImageView()

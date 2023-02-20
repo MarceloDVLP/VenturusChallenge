@@ -3,7 +3,7 @@ import Foundation
 
 protocol PhotoGalleryPresenterProtocol {
     func viewDidLoad()
-    func didSelectItem(_ item: Item)
+    func didSelectItem(_ item: PhotoItem)
 }
 
 protocol PhotoGalleryPresenterDelegate: AnyObject {
@@ -25,7 +25,7 @@ final class PhotoGalleryPresenter: PhotoGalleryPresenterProtocol {
         interactor.fetchImages()
     }
     
-    func didSelectItem(_ item: Item) {
+    func didSelectItem(_ item: PhotoItem) {
         router.showDetail(item)
     }    
 }

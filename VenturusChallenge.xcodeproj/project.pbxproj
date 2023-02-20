@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C740049929A2DD200074E9AD /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740049829A2DD200074E9AD /* PhotoDetailViewController.swift */; };
 		C740049B29A2E9D90074E9AD /* PhotoGalleryViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740049A29A2E9D90074E9AD /* PhotoGalleryViewControllerBuilder.swift */; };
+		C74004A029A2F2480074E9AD /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740049F29A2F2480074E9AD /* PhotoItem.swift */; };
 		C799270029A005C500D43639 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79926FE29A005C500D43639 /* PhotoCell.swift */; };
 		C7B0875229A272BB00366EF5 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B0875129A272BB00366EF5 /* ImageCache.swift */; };
 		C7B0875429A2CB9C00366EF5 /* PhotoGalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B0875329A2CB9C00366EF5 /* PhotoGalleryInteractor.swift */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		C740049829A2DD200074E9AD /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		C740049A29A2E9D90074E9AD /* PhotoGalleryViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewControllerBuilder.swift; sourceTree = "<group>"; };
+		C740049F29A2F2480074E9AD /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
 		C79926FE29A005C500D43639 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		C7B0875129A272BB00366EF5 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		C7B0875329A2CB9C00366EF5 /* PhotoGalleryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryInteractor.swift; sourceTree = "<group>"; };
@@ -100,13 +102,35 @@
 			path = PhotoDetail;
 			sourceTree = "<group>";
 		};
+		C740049C29A2F1B70074E9AD /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C7B0875129A272BB00366EF5 /* ImageCache.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C740049D29A2F1C90074E9AD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C7B0875529A2D06D00366EF5 /* PhotoGalleryPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C740049E29A2F1DD0074E9AD /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C7B0875329A2CB9C00366EF5 /* PhotoGalleryInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		C7B0875729A2D08C00366EF5 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				C740049D29A2F1C90074E9AD /* Presenter */,
 				C7B0875929A2D0B500366EF5 /* View */,
-				C7B0875529A2D06D00366EF5 /* PhotoGalleryPresenter.swift */,
-				C7EA6949299C3AF0002A1057 /* PhotoGalleryViewController.swift */,
-				C7B0875129A272BB00366EF5 /* ImageCache.swift */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -114,8 +138,8 @@
 		C7B0875829A2D09600366EF5 /* Business Logic */ = {
 			isa = PBXGroup;
 			children = (
+				C740049E29A2F1DD0074E9AD /* Interactor */,
 				C7EA6955299F9D81002A1057 /* RemoteService */,
-				C7B0875329A2CB9C00366EF5 /* PhotoGalleryInteractor.swift */,
 			);
 			path = "Business Logic";
 			sourceTree = "<group>";
@@ -123,8 +147,10 @@
 		C7B0875929A2D0B500366EF5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C7EA6949299C3AF0002A1057 /* PhotoGalleryViewController.swift */,
 				C7EA694D299C3B93002A1057 /* PhotoGalleryView.swift */,
 				C79926FE29A005C500D43639 /* PhotoCell.swift */,
+				C740049F29A2F2480074E9AD /* PhotoItem.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,6 +177,7 @@
 		C7EA6918299C3AD7002A1057 /* VenturusChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				C740049C29A2F1B70074E9AD /* Shared */,
 				C740049729A2DD000074E9AD /* PhotoDetail */,
 				C7EA6953299C600A002A1057 /* PhotoGallery */,
 				C7EA6952299C5FD7002A1057 /* Resources */,
@@ -356,6 +383,7 @@
 				C7EA691A299C3AD7002A1057 /* AppDelegate.swift in Sources */,
 				C7B0875629A2D06D00366EF5 /* PhotoGalleryPresenter.swift in Sources */,
 				C740049B29A2E9D90074E9AD /* PhotoGalleryViewControllerBuilder.swift in Sources */,
+				C74004A029A2F2480074E9AD /* PhotoItem.swift in Sources */,
 				C7EA695D299F9D81002A1057 /* RemoteService.swift in Sources */,
 				C7EA691C299C3AD7002A1057 /* SceneDelegate.swift in Sources */,
 				C7EA695B299F9D81002A1057 /* Endpoints.swift in Sources */,
