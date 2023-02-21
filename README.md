@@ -26,8 +26,9 @@ each layer use protocols to talk to another, so it's pretty simple to test them 
 
 The app has two main features:
 
-1) The Photo Gallery
-2) The Photo Detail
+1) The Photo Gallery: Lists photos on a collectionView and paginate the API when user scrolls to the end of list.
+
+2) The Photo Detail: Shows the detail of an item 
 
 ## Network Layer
 
