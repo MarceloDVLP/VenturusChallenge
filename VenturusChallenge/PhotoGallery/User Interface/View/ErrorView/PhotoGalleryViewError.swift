@@ -4,7 +4,7 @@ final class PhotoGalleryViewError: UIView {
     
     var didTapTryAgain: (() -> ())?
     
-    private var button: UIButton = {
+    private lazy var button: UIButton = {
         let button = UIButton()
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         button.setTitleColor(.black, for: .normal)
@@ -15,7 +15,7 @@ final class PhotoGalleryViewError: UIView {
         return button
     }()
     
-    private var textLabel: UILabel = {
+    private lazy var textLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.numberOfLines = 0

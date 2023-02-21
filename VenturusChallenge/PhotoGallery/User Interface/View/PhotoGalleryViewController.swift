@@ -13,6 +13,7 @@ final class PhotoGalleryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationTitle()
         addPhotoView()
         presenter.viewDidLoad()
     }
