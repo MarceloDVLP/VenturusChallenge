@@ -1,7 +1,7 @@
 import Foundation
 
 protocol RemoteServiceProtocol {
-    func fetch(completion: @escaping (ServiceResult) -> ())
+    func fetch(page: Int, completion: @escaping (ServiceResult) -> ())
 }
 
 typealias ServiceResult = Result<SearchResponse, RemoteServiceError>
@@ -14,8 +14,8 @@ final class RemoteService: RemoteServiceProtocol {
         self.client = client
     }
 
-    func fetch(completion: @escaping (ServiceResult) -> ()) {
-        let url = Endpoints.url
+    func fetch(page: Int, completion: @escaping (ServiceResult) -> ()) {
+        let url = Endpoints.url(page)
 
         client.request(url: url, completion: { [weak self] result in
             guard let self = self else { return }
@@ -35,7 +35,10 @@ final class RemoteService: RemoteServiceProtocol {
             let object = try decoder.decode(SearchResponse.self, from: data)
             return Result.success(object)
         } catch let error {
+            let json = NSString(data: data, encoding: String.Encoding.utf8.rawValue) ?? ""
             print("Error to DECODE: \(String(describing: error))")
+            print("JSON: \(json)")
+
             return Result.failure(RemoteServiceError.serverError)
         }
     }

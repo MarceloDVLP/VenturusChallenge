@@ -1,6 +1,6 @@
 import UIKit
 
-final class PhotoItem: Hashable {
+class PhotoItem: Hashable {
 
     var url: URL?
     let identifier = UUID()
@@ -21,3 +21,5 @@ final class PhotoItem: Hashable {
         self.title = title
     }
 }
+
+final class PhotoLoading: PhotoItem {}

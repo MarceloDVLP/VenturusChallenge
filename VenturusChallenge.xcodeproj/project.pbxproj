@@ -25,7 +25,7 @@
 		C7EA694A299C3AF0002A1057 /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6949299C3AF0002A1057 /* PhotoGalleryViewController.swift */; };
 		C7EA694F299C579B002A1057 /* PhotoGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA694D299C3B93002A1057 /* PhotoGalleryView.swift */; };
 		C7EA695B299F9D81002A1057 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6956299F9D81002A1057 /* Endpoints.swift */; };
-		C7EA695C299F9D81002A1057 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6958299F9D81002A1057 /* WeatherResponse.swift */; };
+		C7EA695C299F9D81002A1057 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6958299F9D81002A1057 /* SearchResponse.swift */; };
 		C7EA695D299F9D81002A1057 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6959299F9D81002A1057 /* RemoteService.swift */; };
 		C7EA695E299F9D81002A1057 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA695A299F9D81002A1057 /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
@@ -51,7 +51,7 @@
 		C7EA6949299C3AF0002A1057 /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
 		C7EA694D299C3B93002A1057 /* PhotoGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryView.swift; sourceTree = "<group>"; };
 		C7EA6956299F9D81002A1057 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
-		C7EA6958299F9D81002A1057 /* WeatherResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		C7EA6958299F9D81002A1057 /* SearchResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		C7EA6959299F9D81002A1057 /* RemoteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
 		C7EA695A299F9D81002A1057 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,9 +127,18 @@
 			path = ErrorView;
 			sourceTree = "<group>";
 		};
+		C74004AC29A4E8830074E9AD /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C74004A629A31FCF0074E9AD /* PhotoGalleryRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		C7B0875729A2D08C00366EF5 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				C74004AC29A4E8830074E9AD /* Router */,
 				C740049D29A2F1C90074E9AD /* Presenter */,
 				C7B0875929A2D0B500366EF5 /* View */,
 			);
@@ -151,7 +160,6 @@
 				C74004AB29A440950074E9AD /* ErrorView */,
 				C74004AA29A4408E0074E9AD /* CollectionView */,
 				C7EA6949299C3AF0002A1057 /* PhotoGalleryViewController.swift */,
-				C74004A629A31FCF0074E9AD /* PhotoGalleryRouter.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,7 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				C7EA6956299F9D81002A1057 /* Endpoints.swift */,
-				C7EA6958299F9D81002A1057 /* WeatherResponse.swift */,
+				C7EA6958299F9D81002A1057 /* SearchResponse.swift */,
 			);
 			path = Codable;
 			sourceTree = "<group>";
@@ -304,7 +312,7 @@
 			files = (
 				C7B0875229A272BB00366EF5 /* ImageCache.swift in Sources */,
 				C7EA694A299C3AF0002A1057 /* PhotoGalleryViewController.swift in Sources */,
-				C7EA695C299F9D81002A1057 /* WeatherResponse.swift in Sources */,
+				C7EA695C299F9D81002A1057 /* SearchResponse.swift in Sources */,
 				C7EA695E299F9D81002A1057 /* HTTPClient.swift in Sources */,
 				C7B0875429A2CB9C00366EF5 /* PhotoGalleryInteractor.swift in Sources */,
 				C740049929A2DD200074E9AD /* PhotoDetailViewController.swift in Sources */,
@@ -458,9 +466,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UYXMKT4M49;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VenturusChallenge/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -488,9 +496,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UYXMKT4M49;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VenturusChallenge/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

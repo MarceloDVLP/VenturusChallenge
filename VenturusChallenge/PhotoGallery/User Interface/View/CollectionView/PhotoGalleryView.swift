@@ -16,6 +16,7 @@ final class PhotoGalleryView: UIView {
     var items: [PhotoItem] = []
     
     var didSelect: ((PhotoItem) -> ())?
+    var didScrollToTheEnd: (() -> ())?
     
     private lazy var dataSource: DataSource = makeDataSource()
     
@@ -97,12 +98,14 @@ final class PhotoGalleryView: UIView {
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
     
-    func showLoadingItems() {
-        let loadingCells: Int = 20
-        for _ in 0...loadingCells {
-            items += [PhotoItem()]
+    func showLoadingItems(numberOfItems: Int = 10) {
+        guard !self.items.contains(where: { type(of: $0) == PhotoLoading.self }) else { return }
+        
+        for _ in 0...numberOfItems {
+            items += [PhotoLoading()]
         }
-        applySnapshot(animatingDifferences: true)
+        
+        applySnapshot(animatingDifferences: false)
     }
     
     required init?(coder: NSCoder) {
@@ -118,6 +121,13 @@ extension PhotoGalleryView: UICollectionViewDelegate {
         }
         didSelect?(item)
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if(scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.bounds.size.height)) && (!self.items.allSatisfy({ type(of: $0) == PhotoLoading.self })) {
+           showLoadingItems()
+        didScrollToTheEnd?()
+       }
+   }
 }
 
 

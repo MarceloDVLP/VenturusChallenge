@@ -19,11 +19,22 @@ final class PhotoGalleryViewController: UIViewController {
     
     func addPhotoView() {
         view.backgroundColor = .white
-        photoView.pinView(in: view)        
+
+        photoView.pinView(in: view)
+
         photoView.didSelect = { [weak self] item in
             self?.presenter.didSelectItem(item)
         }
+        
+        photoView.didScrollToTheEnd = { [weak self] in
+            self?.presenter.didScrollToTheEnd()
+        }
+        
         photoView.showLoadingItems()
+    }
+    
+    func setupNavigationTitle() {
+        title = "PhotoGram"
     }
     
     required init?(coder: NSCoder) {

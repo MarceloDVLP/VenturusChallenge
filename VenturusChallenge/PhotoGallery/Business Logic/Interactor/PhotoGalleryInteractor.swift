@@ -15,26 +15,32 @@ final class PhotoGalleryInteractor: PhotoGalleryInteractorProtocol {
     
     var presenter: PhotoGalleryInteractorDelegate?
     
+    var photos: [Photo] = []
+    var page: Int = -1
+    
     init(service: RemoteService) {
         self.service = service
     }
     
     func fetchImages() {
-        service.fetch(completion: { [weak self] result in
+        page += 1
+        service.fetch(page: page, completion: { [weak self] result in
             switch result {
             case .success(let response):
                 
                 var items: [Photo] = []
                 
                 response.data.forEach({ data in
-                    let photos = data.images.filter({ $0.type == "image/png" || $0.type == "image/jpeg" }).map({ Photo(title: data.title, url: $0.link)})
-                    items.append(contentsOf: photos)
+                    let mapped = data.images?.filter({ $0.type == "image/png" || $0.type == "image/jpeg" }).map({ Photo(title: data.title, url: $0.link)}) ?? []
+                    items.append(contentsOf: mapped)
                 })
-                
-                self?.presenter?.show(items)
+                self?.photos += items
+                self?.presenter?.show(self?.photos ?? [])
                 
             case .failure(_):
-                self?.presenter?.showTryAgain()
+                if self?.page == 1 {
+                    self?.presenter?.showTryAgain()
+                }
             }
         })
     }

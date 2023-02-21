@@ -34,6 +34,10 @@ final class PhotoGalleryPresenter: PhotoGalleryPresenterProtocol {
     func didTapTryAgainButton() {
         interactor.fetchImages()
     }
+    
+    func didScrollToTheEnd() {
+        interactor.fetchImages()
+    }
 }
 
 extension PhotoGalleryPresenter: PhotoGalleryInteractorDelegate {

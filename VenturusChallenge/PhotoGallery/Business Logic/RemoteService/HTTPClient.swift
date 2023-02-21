@@ -26,7 +26,8 @@ final class HTTPClient: HTTPClientProtocol {
         self.session = session
     }
     
-    func request(url: URL, completion: @escaping (RequestResult) -> ()) {        
+    func request(url: URL, completion: @escaping (RequestResult) -> ()) {
+        print("REQUEST \(url.absoluteString)")
         var request = URLRequest(url: url)
         request.allHTTPHeaderFields = ["Authorization": "Client-ID 1ceddedc03a5d71",
                                         "content-type": "application/json"]
