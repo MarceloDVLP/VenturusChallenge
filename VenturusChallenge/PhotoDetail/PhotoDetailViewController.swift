@@ -14,14 +14,16 @@ final class PhotoDetailViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.numberOfLines = 0
         label.textAlignment = .center
+        label.textColor = .black
+        label.textColor = UIColor.label
         return label
     }()
     
     init(_ item: PhotoItem) {
         super.init(nibName: nil, bundle: nil)
+        view.backgroundColor = .systemBackground
         constraintImageView()
         constraintNameLabel()
-        view.backgroundColor = .white
         nameLabel.text = item.title
 
         guard let url = item.url as? NSURL else { return }
