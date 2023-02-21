@@ -23,7 +23,6 @@ final class PhotoGalleryView: UIView {
         super.init(frame: frame)
         collectionView.delegate = self
         collectionView.pinView(in: self)
-        
     }
     
     func cellRegistration() -> UICollectionView.CellRegistration<PhotoCell, PhotoItem> {

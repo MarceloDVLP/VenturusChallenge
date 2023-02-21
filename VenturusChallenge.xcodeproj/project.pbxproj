@@ -22,7 +22,6 @@
 		C7EA691C299C3AD7002A1057 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA691B299C3AD7002A1057 /* SceneDelegate.swift */; };
 		C7EA6923299C3AD8002A1057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7EA6922299C3AD8002A1057 /* Assets.xcassets */; };
 		C7EA6926299C3AD8002A1057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EA6924299C3AD8002A1057 /* LaunchScreen.storyboard */; };
-		C7EA6931299C3AD8002A1057 /* VenturusChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6930299C3AD8002A1057 /* VenturusChallengeTests.swift */; };
 		C7EA694A299C3AF0002A1057 /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6949299C3AF0002A1057 /* PhotoGalleryViewController.swift */; };
 		C7EA694F299C579B002A1057 /* PhotoGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA694D299C3B93002A1057 /* PhotoGalleryView.swift */; };
 		C7EA695B299F9D81002A1057 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6956299F9D81002A1057 /* Endpoints.swift */; };
@@ -30,23 +29,6 @@
 		C7EA695D299F9D81002A1057 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA6959299F9D81002A1057 /* RemoteService.swift */; };
 		C7EA695E299F9D81002A1057 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA695A299F9D81002A1057 /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C7EA692D299C3AD8002A1057 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7EA690E299C3AD7002A1057 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C7EA6915299C3AD7002A1057;
-			remoteInfo = VenturusChallenge;
-		};
-		C7EA6937299C3AD8002A1057 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7EA690E299C3AD7002A1057 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C7EA6915299C3AD7002A1057;
-			remoteInfo = VenturusChallenge;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C740049829A2DD200074E9AD /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
@@ -66,9 +48,6 @@
 		C7EA6922299C3AD8002A1057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7EA6925299C3AD8002A1057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7EA6927299C3AD8002A1057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7EA692C299C3AD8002A1057 /* VenturusChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenturusChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7EA6930299C3AD8002A1057 /* VenturusChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenturusChallengeTests.swift; sourceTree = "<group>"; };
-		C7EA6936299C3AD8002A1057 /* VenturusChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenturusChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EA6949299C3AF0002A1057 /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
 		C7EA694D299C3B93002A1057 /* PhotoGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryView.swift; sourceTree = "<group>"; };
 		C7EA6956299F9D81002A1057 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
@@ -79,20 +58,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		C7EA6913299C3AD7002A1057 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C7EA6929299C3AD8002A1057 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C7EA6933299C3AD8002A1057 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -144,6 +109,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C74004AA29A4408E0074E9AD /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA694D299C3B93002A1057 /* PhotoGalleryView.swift */,
+				C79926FE29A005C500D43639 /* PhotoCell.swift */,
+				C740049F29A2F2480074E9AD /* PhotoItem.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		C74004AB29A440950074E9AD /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				C74004A829A435F90074E9AD /* PhotoGalleryViewError.swift */,
+			);
+			path = ErrorView;
+			sourceTree = "<group>";
+		};
 		C7B0875729A2D08C00366EF5 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,12 +148,10 @@
 		C7B0875929A2D0B500366EF5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C74004AB29A440950074E9AD /* ErrorView */,
+				C74004AA29A4408E0074E9AD /* CollectionView */,
 				C7EA6949299C3AF0002A1057 /* PhotoGalleryViewController.swift */,
 				C74004A629A31FCF0074E9AD /* PhotoGalleryRouter.swift */,
-				C7EA694D299C3B93002A1057 /* PhotoGalleryView.swift */,
-				C79926FE29A005C500D43639 /* PhotoCell.swift */,
-				C740049F29A2F2480074E9AD /* PhotoItem.swift */,
-				C74004A829A435F90074E9AD /* PhotoGalleryViewError.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				C7EA6918299C3AD7002A1057 /* VenturusChallenge */,
-				C7EA692F299C3AD8002A1057 /* VenturusChallengeTests */,
 				C7EA6917299C3AD7002A1057 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -188,8 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				C7EA6916299C3AD7002A1057 /* VenturusChallenge.app */,
-				C7EA692C299C3AD8002A1057 /* VenturusChallengeTests.xctest */,
-				C7EA6936299C3AD8002A1057 /* VenturusChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,14 +182,6 @@
 				C7EA6951299C5FCA002A1057 /* Application */,
 			);
 			path = VenturusChallenge;
-			sourceTree = "<group>";
-		};
-		C7EA692F299C3AD8002A1057 /* VenturusChallengeTests */ = {
-			isa = PBXGroup;
-			children = (
-				C7EA6930299C3AD8002A1057 /* VenturusChallengeTests.swift */,
-			);
-			path = VenturusChallengeTests;
 			sourceTree = "<group>";
 		};
 		C7EA6951299C5FCA002A1057 /* Application */ = {
@@ -282,42 +252,6 @@
 			productReference = C7EA6916299C3AD7002A1057 /* VenturusChallenge.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C7EA692B299C3AD8002A1057 /* VenturusChallengeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C7EA6943299C3AD8002A1057 /* Build configuration list for PBXNativeTarget "VenturusChallengeTests" */;
-			buildPhases = (
-				C7EA6928299C3AD8002A1057 /* Sources */,
-				C7EA6929299C3AD8002A1057 /* Frameworks */,
-				C7EA692A299C3AD8002A1057 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C7EA692E299C3AD8002A1057 /* PBXTargetDependency */,
-			);
-			name = VenturusChallengeTests;
-			productName = VenturusChallengeTests;
-			productReference = C7EA692C299C3AD8002A1057 /* VenturusChallengeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C7EA6935299C3AD8002A1057 /* VenturusChallengeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C7EA6946299C3AD8002A1057 /* Build configuration list for PBXNativeTarget "VenturusChallengeUITests" */;
-			buildPhases = (
-				C7EA6932299C3AD8002A1057 /* Sources */,
-				C7EA6933299C3AD8002A1057 /* Frameworks */,
-				C7EA6934299C3AD8002A1057 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C7EA6938299C3AD8002A1057 /* PBXTargetDependency */,
-			);
-			name = VenturusChallengeUITests;
-			productName = VenturusChallengeUITests;
-			productReference = C7EA6936299C3AD8002A1057 /* VenturusChallengeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -330,14 +264,6 @@
 				TargetAttributes = {
 					C7EA6915299C3AD7002A1057 = {
 						CreatedOnToolsVersion = 14.2;
-					};
-					C7EA692B299C3AD8002A1057 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = C7EA6915299C3AD7002A1057;
-					};
-					C7EA6935299C3AD8002A1057 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = C7EA6915299C3AD7002A1057;
 					};
 				};
 			};
@@ -355,8 +281,6 @@
 			projectRoot = "";
 			targets = (
 				C7EA6915299C3AD7002A1057 /* VenturusChallenge */,
-				C7EA692B299C3AD8002A1057 /* VenturusChallengeTests */,
-				C7EA6935299C3AD8002A1057 /* VenturusChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -368,20 +292,6 @@
 			files = (
 				C7EA6926299C3AD8002A1057 /* LaunchScreen.storyboard in Resources */,
 				C7EA6923299C3AD8002A1057 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C7EA692A299C3AD8002A1057 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C7EA6934299C3AD8002A1057 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,35 +324,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C7EA6928299C3AD8002A1057 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C7EA6931299C3AD8002A1057 /* VenturusChallengeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C7EA6932299C3AD8002A1057 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C7EA692E299C3AD8002A1057 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C7EA6915299C3AD7002A1057 /* VenturusChallenge */;
-			targetProxy = C7EA692D299C3AD8002A1057 /* PBXContainerItemProxy */;
-		};
-		C7EA6938299C3AD8002A1057 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C7EA6915299C3AD7002A1057 /* VenturusChallenge */;
-			targetProxy = C7EA6937299C3AD8002A1057 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C7EA6924299C3AD8002A1057 /* LaunchScreen.storyboard */ = {
@@ -630,82 +512,6 @@
 			};
 			name = Release;
 		};
-		C7EA6944299C3AD8002A1057 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UYXMKT4M49;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = trio.challenge.marcelocarvalho.com.VenturusChallengeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VenturusChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VenturusChallenge";
-			};
-			name = Debug;
-		};
-		C7EA6945299C3AD8002A1057 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UYXMKT4M49;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = trio.challenge.marcelocarvalho.com.VenturusChallengeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VenturusChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VenturusChallenge";
-			};
-			name = Release;
-		};
-		C7EA6947299C3AD8002A1057 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UYXMKT4M49;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = trio.challenge.marcelocarvalho.com.VenturusChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = VenturusChallenge;
-			};
-			name = Debug;
-		};
-		C7EA6948299C3AD8002A1057 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UYXMKT4M49;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = trio.challenge.marcelocarvalho.com.VenturusChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = VenturusChallenge;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -723,24 +529,6 @@
 			buildConfigurations = (
 				C7EA6941299C3AD8002A1057 /* Debug */,
 				C7EA6942299C3AD8002A1057 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C7EA6943299C3AD8002A1057 /* Build configuration list for PBXNativeTarget "VenturusChallengeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C7EA6944299C3AD8002A1057 /* Debug */,
-				C7EA6945299C3AD8002A1057 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C7EA6946299C3AD8002A1057 /* Build configuration list for PBXNativeTarget "VenturusChallengeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C7EA6947299C3AD8002A1057 /* Debug */,
-				C7EA6948299C3AD8002A1057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

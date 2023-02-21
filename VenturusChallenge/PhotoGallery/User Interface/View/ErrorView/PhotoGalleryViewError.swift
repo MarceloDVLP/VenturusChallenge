@@ -61,5 +61,4 @@ final class PhotoGalleryViewError: UIView {
             textLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
         ])
     }
-    
 }

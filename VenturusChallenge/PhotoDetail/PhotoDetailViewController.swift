@@ -37,7 +37,7 @@ final class PhotoDetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func constraintImageView() {
+    private func constraintImageView() {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(imageView)
         
@@ -49,7 +49,7 @@ final class PhotoDetailViewController: UIViewController {
         ])
     }
 
-    func constraintNameLabel() {
+    private func constraintNameLabel() {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(nameLabel)
         
