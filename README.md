@@ -46,4 +46,4 @@ We create a class (ImageCache.swift) to manage and cache the images data in memo
 
 ## App Entry Point
 
-The entry point is on SceneDelegate. We have a factory class that creates our main app feature injecting each dependecie.
+The entry point is on SceneDelegate. We have a factory class that creates our main app feature injecting each dependency.
